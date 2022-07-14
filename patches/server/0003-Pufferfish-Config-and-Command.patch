@@ -62,13 +62,13 @@ index 0000000000000000000000000000000000000000..020368da69b9a492155f6de6297f7473
 +
 +    public PufferfishCommand() {
 +        super("pufferfish");
-+        this.description = "Pufferfish related commands";
-+        this.usageMessage = "/pufferfish [reload | version]";
++        this.description = "BAP Forko komandos";
++        this.usageMessage = "/bapfork [reload | version]";
 +        this.setPermission("bukkit.command.pufferfish");
 +    }
 +    
 +    public static void init() {
-+        MinecraftServer.getServer().server.getCommandMap().register("pufferfish", "Pufferfish", new PufferfishCommand());
++        MinecraftServer.getServer().server.getCommandMap().register("bapfork", "BAPfork", new PufferfishCommand());
 +    }
 +
 +    @Override
@@ -102,9 +102,9 @@ index 0000000000000000000000000000000000000000..020368da69b9a492155f6de6297f7473
 +            }
 +            console.server.reloadCount++;
 +
-+            Command.broadcastCommandMessage(sender, prefix + "Pufferfish configuration has been reloaded.");
++            Command.broadcastCommandMessage(sender, prefix + "Konfigūracija sėkmingai atnaujinta.");
 +        } else if (args[0].equalsIgnoreCase("version")) {
-+            Command.broadcastCommandMessage(sender, prefix + "This server is running " + Bukkit.getName() + " version " + Bukkit.getVersion() + " (Implementing API version " + Bukkit.getBukkitVersion() + ")");
++            Command.broadcastCommandMessage(sender, prefix + "Šis serveris naudoja " + Bukkit.getName() + " versiją " + Bukkit.getVersion() + " (API versiją " + Bukkit.getBukkitVersion() + ")");
 +        }
 +
 +        return true;
